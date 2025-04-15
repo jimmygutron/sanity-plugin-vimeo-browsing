@@ -1,0 +1,81 @@
+{
+  "name": "sanity-plugin-vimeo-browsing",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "sanity",
+    "sanity-plugin"
+  ],
+  "homepage": "https://github.com/jimmygutron/sanity-plugin-vimeo-browsing#readme",
+  "bugs": {
+    "url": "https://github.com/jimmygutron/sanity-plugin-vimeo-browsing/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jimmygutron/sanity-plugin-vimeo-browsing.git"
+  },
+  "license": "MIT",
+  "author": "Jinkyu Song <jkssongg@gmail.com>",
+  "sideEffects": false,
+  "type": "commonjs",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "sanity.json",
+    "src",
+    "v2-incompatible.js"
+  ],
+  "scripts": {
+    "build": "plugin-kit verify-package --silent && pkg-utils build --strict --check --clean",
+    "format": "prettier --write --cache --ignore-unknown .",
+    "link-watch": "plugin-kit link-watch",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build",
+    "watch": "pkg-utils watch --strict"
+  },
+  "dependencies": {
+    "@sanity/icons": "^3.7.0",
+    "@sanity/incompatible-plugin": "^1.0.5",
+    "@sanity/ui": "^2.15.6",
+    "use-debounce": "^10.0.4"
+  },
+  "devDependencies": {
+    "@sanity/pkg-utils": "^7.1.0",
+    "@sanity/plugin-kit": "^4.0.19",
+    "@types/react": "^19.0.10",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-config-sanity": "^7.1.4",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-packagejson": "^2.5.10",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sanity": "^3.79.0",
+    "styled-components": "^6.1.15",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "sanity": "^3"
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
