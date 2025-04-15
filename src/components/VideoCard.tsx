@@ -1,7 +1,7 @@
 import {EllipsisHorizontalIcon, LaunchIcon} from '@sanity/icons'
 import {Badge, Button, Card, Flex, Menu, MenuButton, MenuItem, Stack, Text} from '@sanity/ui'
 import {ReactElement, useCallback, useState} from 'react'
-import {FormPatch, PatchEvent, set, unset} from 'sanity'
+import {FormPatch, PatchEvent, set} from 'sanity'
 
 import {Video} from '../utils/types'
 
