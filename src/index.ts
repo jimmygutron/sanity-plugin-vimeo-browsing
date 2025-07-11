@@ -13,6 +13,10 @@ const defaultConfig: Config = {
   accessToken: '',
 }
 
+/**
+ * @public
+ */
+
 export const vimeoBrowsing = definePlugin<Config | void>((userConfig) => {
   const config: Config = {...defaultConfig, ...userConfig}
   return {

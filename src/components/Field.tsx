@@ -15,6 +15,9 @@ const Field = ({...props}: FieldProps) => {
         <Text size={1} weight={'medium'}>
           Video
         </Text>
+        <Text style={{width: '75%', maxWidth: 'calc(100% - 92px)'}} size={1} muted>
+          {props.description}
+        </Text>
         {children}
       </Stack>
     </Card>
